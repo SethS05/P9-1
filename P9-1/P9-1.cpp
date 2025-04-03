@@ -53,6 +53,12 @@ int main()
 		cout << evenArray[i] << " ";
 	}
 
+	// Print the arr1[] elements in reverse order
+	cout << "\nReversed Order: ";
+	for (int i = size - 1; i >= 0; i--) {
+		cout << arr1[i] << " ";
+	}
+
 }
 
 void getEvenIndexElements(int arr1[], int size, int evenIndexArray[], int& evenIndexSize) {
