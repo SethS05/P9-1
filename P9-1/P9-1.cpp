@@ -14,11 +14,13 @@
 
 using namespace std;
 
-
+void getEvenIndexElements(int arr1[], int size, int evenIndexArray[], int& evenIndexSize);
 
 int main()
 {
 	int arr1[10];
+	int evenIndexArray[10];
+	int evenIndexSize;
 
 	srand(time(0));
 
@@ -31,7 +33,24 @@ int main()
 		cout << arr1[i] << " ";
 	}
 
+	// Get values for even index array and print them
+	getEvenIndexElements(arr1, size, evenIndexArray, evenIndexSize);
 
+	cout << "\nEven Indices: ";
+
+	for (int i = 0; i < evenIndexSize; i++) {
+		cout << evenIndexArray[i] << " ";
+	}
+
+}
+
+void getEvenIndexElements(int arr1[], int size, int evenIndexArray[], int& evenIndexSize) {
+	evenIndexSize = 0;
+	for (int i = 0; i < size; i++) {
+		if (i % 2 == 0) {
+			evenIndexArray[evenIndexSize++] = arr1[i];
+		}
+	}
 }
 
  
