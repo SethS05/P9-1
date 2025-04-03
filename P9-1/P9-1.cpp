@@ -59,6 +59,11 @@ int main()
 		cout << arr1[i] << " ";
 	}
 
+	// Print the first and last element of the array
+	cout << "\nFirst and Last: ";
+	cout << arr1[0] << " " << arr1[size - 1];
+}
+
 }
 
 void getEvenIndexElements(int arr1[], int size, int evenIndexArray[], int& evenIndexSize) {
